@@ -64,4 +64,4 @@ class PointsRenderer(nn.Module):
         # permute so image comes at the end
         images = images.permute(0, 2, 3, 1)
 
-        return images
+        return images, weights, fragments.idx.long().permute(0, 3, 1, 2)
